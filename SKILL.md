@@ -6,6 +6,11 @@ name: dy-teardown
 description: 抖音爆款拆解数据源（只读）：关键词搜索、博主作品、作品详情、评论、热榜。触发：抖音搜索、热搜、评论、需求挖掘、痛点、作品详情、博主作品、对标账号、播放量、选题、舆情、竞品。小红书、快手、B站、微博、公众号不要用本技能。sec_uid、aweme_id、douyin search、douyin hot、douyin detail、douyin comments。
 license: MIT
 version: 1.5.1
+display_name: "抖音爆款拆解｜结构拆解·钩子分析·评论反馈·复刻清单"
+display_name_en: "Douyin Viral Teardown"
+description_zh: "抖音爆款拆解数据源（只读，无需登录你的抖音账号，不发布不点赞不评论，无风控封号问题）：一条命令取到抖音公开数据，全部以结构化 JSON 输出，可直接导入 Excel/BI 或交给 AI 拆解。\n\n六类能力：①关键词搜索视频与图文，支持综合/最多点赞/最新排序，1 天/7 天/半年时间范围，以及时长、内容类型筛选；②用户与达人搜索，按关键词找对标账号；③博主作品抓取，可只取互动数据（--limit 0）；④单条作品详情：文案、播放量、点赞、评论、收藏、分享、标签、音乐、话题；⑤视频与图文评论抓取，用于评论区情绪与需求归因；⑥实时热榜，判断当天流量入口。\n\n典型产出：爆款结构拆解、开头钩子分析、评论反馈归因、可复用复刻清单、对标账号表、选题库、舆情周报。\n\n规模：按量 Token 单次最多 10000 条；包月 Token 视频搜索/用户搜索/作品最多 30 条、评论最多 50 条，超限返回 PLAN_LIMIT。仅需 Node.js 16.14+ 与 GUAIKEI_API_TOKEN，零第三方依赖。"
+description_en: "Read-only Douyin viral teardown data source. No login, no posting or liking, so no ban risk. One command returns public Douyin data as structured JSON, ready for Excel, BI or an AI agent.\n\nCapabilities: 1) Keyword search over videos and image posts, sorted by relevance, likes or newest, with 1/7/180-day windows, duration and content-type filters. 2) User and creator search for benchmark accounts. 3) Creator post listing, plus interactions-only mode (--limit 0). 4) Post detail: caption, plays, likes, comments, collects, shares, tags, music, topics. 5) Comment scraping for sentiment and demand attribution. 6) Real-time hot list for daily traffic.\n\nOutputs: structure breakdown, hook analysis, comment feedback attribution, replication checklist, benchmark account tables, topic libraries, sentiment reports.\n\nScale: pay-as-you-go up to 10,000 items per call; monthly plans cap search and posts at 30 items, comments at 50, then PLAN_LIMIT. Needs Node.js 16.14+ and GUAIKEI_API_TOKEN."
+author: "新郑市怪奇信息技术工作室"
 metadata:
   openclaw:
     emoji: "🎬"
